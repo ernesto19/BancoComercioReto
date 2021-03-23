@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.banco_comercio_reto.view.ui.fragments.UsersListFragment"
+        android:label="@string/main_fragment_label"
+        tools:layout="@layout/users_list_fragment">
+
+        <action
+            android:id="@+id/action_MainFragment_to_UserDetailFragment"
+            app:destination="@id/userDetailFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.banco_comercio_reto.view.ui.fragments.UserDetailFragment"
+        android:label="@string/user_detail_fragment_label">
+
+        <argument
+            android:name="name"
+            app:argType="string"/>
+
+        <argument
+            android:name="username"
+            app:argType="string"/>
+
+        <argument
+            android:name="email"
+            app:argType="string"/>
+
+        <argument
+            android:name="phone"
+            app:argType="string"/>
+
+        <argument
+            android:name="webSite"
+            app:argType="string"/>
+
+        <argument
+            android:name="street"
+            app:argType="string"/>
+
+        <argument
+            android:name="suite"
+            app:argType="string"/>
+
+        <argument
+            android:name="city"
+            app:argType="string"/>
+
+        <argument
+            android:name="companyName"
+            app:argType="string"/>
+
+        <argument
+            android:name="catchPhrase"
+            app:argType="string"/>
+
+    </fragment>
+
+</navigation>
