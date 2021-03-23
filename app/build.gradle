@@ -18,6 +18,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'BASE_URL', '"https://jsonplaceholder.typicode.com"'
     }
 
     buildTypes {
@@ -70,5 +72,6 @@ dependencies {
     // DataBinding
     kapt 'com.android.databinding:compiler:3.2.0-alpha10'
 
+    // Calligraphy
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 }
